@@ -9,14 +9,17 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Imports: 
-    dplyr,
+Imports:
     ggplot2,
     ggpubr,
     grid,
     png,
     ggtext,
+<<<<<<< Updated upstream
     flextable
+=======
+    extrafont
+>>>>>>> Stashed changes
 Depends: 
     R (>= 3.5)
 LazyData: true

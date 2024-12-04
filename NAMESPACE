@@ -2,4 +2,8 @@
 
 export(add_sano_title)
 export(save_sano_plot)
+<<<<<<< Updated upstream
 export(style_sano_table)
+=======
+export(style_sano_plot)
+>>>>>>> Stashed changes

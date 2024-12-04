@@ -1,28 +1,23 @@
-library(ggplot2)
-
-x <- ggplot(mtcars) +
-  aes(disp, mpg, color = factor(cyl)) +  # Gebruik 'factor(cyl)' om 'cyl' als categorisch te behandelen
-  geom_point() +
-  facet_grid(vs ~ gear) +  # Facetten: 'vs' bepaalt rijen, 'gear' bepaalt kolommen
-  theme_minimal() +  # Minimalistische stijl
-  theme(
-    legend.position = "top",  # Verplaats de legenda naar boven
-    legend.title = element_text(size = 10, face = "bold"),  # Pas de titel van de legenda aan
-    legend.text = element_text(size = 8)  # Pas de tekst van de legenda aan
-  ) +
-  labs(
-    color = "Cylinders",  # Geef een duidelijke titel aan de legenda
-    x = "Displacement (disp)",  # Pas de x-as label aan
-    y = "Miles per Gallon (mpg)"  # Pas de y-as label aan
-  )
-
-x +
-  theme()
-
-#font size and gridlines
-
-#gridlines_horizontal = TRUE, gridlines_vertical = TRUE
-
+#' Apply Sano Styling to a ggplot Object
+#'
+#' This function customizes a ggplot object by applying the Sano style, which includes specific font settings, gridline options, and other theme adjustments.
+#'
+#' @param x A ggplot object to be styled.
+#' @param gridlines_horizontal Logical. If `TRUE`, displays horizontal gridlines. Defaults to `TRUE`.
+#' @param gridlines_vertical Logical. If `TRUE`, displays vertical gridlines. Defaults to `TRUE`.
+#' @param font Character. The font family to use for text elements. Defaults to `"Arial"`.
+#'
+#' @return A ggplot object with the Sano styling applied.
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' library(ggplot2)
+#' p <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+#'   geom_point()
+#' styled_p <- style_sano_plot(p)
+#' print(styled_p)
+#' }
 style_sano_plot <- function(x, gridlines_horizontal = TRUE, gridlines_vertical = TRUE, font = "Arial") {
 
   if (!(font %in% extrafont::fonts())) {
