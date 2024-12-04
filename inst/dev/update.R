@@ -92,5 +92,5 @@ pkgdown::build_site() ## update website
 ##++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ##                        Extra code ####
 ##++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-usethis::use_package() ## include a package as dependency
+usethis::use_package("ggtext") ## include a package as dependency
 usethis::use_vignette() ## include a new vignette
