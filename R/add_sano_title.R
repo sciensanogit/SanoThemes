@@ -34,7 +34,7 @@ add_sano_title <- function(label, number, subtitle = ggplot2::waiver()) {
   # Format the title with specified styles
   label <- sprintf(
     "<span style='font-family:Arial;font-weight:bold;color:#3aaa35;'>Figure %s</span>
-     <span style='font-family:Arial;font-weight:bold;color:#bccf00;'>.</span>
+     <span style='font-family:Arial;font-weight:bold;color:#bccf00;'>●</span>
      <span style='font-family:Arial;font-weight:bold;color:#4d4d4d;'>%s</span>",
     number, label
   )

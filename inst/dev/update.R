@@ -14,5 +14,5 @@ devtools::load_all()
 devtools::check()
 
 ## If you want to add a package, please specify this below
-usethis::use_package("ggtext") ## include a package as dependency
+usethis::use_package("extrafont") ## include a package as dependency
 # usethis::use_vignette() ## include a new vignette
