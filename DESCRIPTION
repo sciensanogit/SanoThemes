@@ -14,4 +14,8 @@ Imports:
     ggplot2,
     ggpubr,
     grid,
-    png
+    png,
+    ggtext
+Depends: 
+    R (>= 3.5)
+LazyData: true
