@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #' Apply Sano Styling to a ggplot Object
 #'
 #' This function customizes a ggplot object by applying the Sano style, which includes specific font settings, gridline options, and other theme adjustments.
@@ -18,6 +19,38 @@
 #' styled_p <- style_sano_plot(p)
 #' print(styled_p)
 #' }
+=======
+library(ggplot2)
+library(rlang)
+library(extrafont)
+data(sano_colors)
+
+mtcars$cyl_factor <- as.factor(mtcars$cyl)
+
+x <- ggplot(mtcars) +
+  aes(disp, mpg, color = cyl_factor) +  # Gebruik 'factor(cyl)' om 'cyl' als categorisch te behandelen
+  geom_point() +
+  facet_grid(vs ~ gear) +  # Facetten: 'vs' bepaalt rijen, 'gear' bepaalt kolommen
+  theme_minimal() +  # Minimalistische stijl
+  theme(
+    legend.position = "top",  # Verplaats de legenda naar boven
+    legend.title = element_text(size = 10, face = "bold"),  # Pas de titel van de legenda aan
+    legend.text = element_text(size = 8)  # Pas de tekst van de legenda aan
+  ) +
+  labs(
+    color = "Cylinders",  # Geef een duidelijke titel aan de legenda
+    x = "Displacement (disp)",  # Pas de x-as label aan
+    y = "Miles per Gallon (mpg)"  # Pas de y-as label aan
+  )
+
+x +
+  theme()
+
+#font size and gridlines
+
+#gridlines_horizontal = TRUE, gridlines_vertical = TRUE
+
+>>>>>>> Stashed changes
 style_sano_plot <- function(x, gridlines_horizontal = TRUE, gridlines_vertical = TRUE, font = "Arial") {
 
   if (!(font %in% extrafont::fonts())) {
@@ -102,7 +135,59 @@ if (gridlines_horizontal == TRUE){
       panel.grid.major.y = ggplot2::element_line(color="#cbcbcb", linewidth = 0.5),
     )
 }
-x
+
+## Colors do not work yet
+# if (!is.null(x$labels$colour) & !is.null(x$labels$fill)) {
+#   if (x$labels$fill == "fill") {
+#     x[["layers"]][[1]][["aes_params"]][["colour"]] <- unname(sano_colors[["discrete"]][1])
+#     x[["layers"]][[1]][["aes_params"]][["fill"]] <- unname(sano_colors[["discrete"]][2])
+#     x[["layers"]][[1]][["aes_params"]][["alpha"]] <- 0.5
+#   } else if (class(x$data[, as_name(x$mapping$fill)]) %in% c("factor", "character") == T) {
+#     x <- x + ggplot2::scale_color_manual(values = unname(sano_colors[["discrete"]])) +
+#       ggplot2::scale_fill_manual(values = unname(sano_colors[["discrete"]]))
+#   } else if (class(x$data[, as_name(x$mapping$fill)]) %in% c("numeric", "integer") == T) {
+#     x <- x + ggplot2::scale_colour_gradientn(
+#       colours = unname(sano_colors[["continuous"]]),
+#       space = "Lab", na.value = "grey50", aesthetics = "colour", guide = ggplot2::guide_colourbar()
+#     ) + ggplot2::guides(colour = ggplot2::guide_colourbar(barwidth = 10, barheight = 0.4)) +
+#       ggplot2::scale_fill_gradientn(
+#         colours = unname(sano_colors[["continuous"]]),
+#         space = "Lab", na.value = "grey50", aesthetics = "fill", guide = ggplot2::guide_colourbar()
+#       ) + ggplot2::guides(fill = ggplot2::guide_colourbar(barwidth = 10, barheight = 0.4))
+#   }
+# } else if (!is.null(x$labels$colour)) {
+#   if (class(x$data[, as_name(x$mapping$colour)]) %in% c("factor", "character") == T) {
+#     x <- x + ggplot2::scale_color_manual(values = unname(sano_colors[["discrete"]]))
+#   } else if (class(x$data[, as_name(x$mapping$colour)]) %in% c("numeric", "integer") == T) {
+#     x <- x + ggplot2::scale_colour_gradientn(
+#       colours = sano_colors[["continuous"]],
+#       space = "Lab", na.value = "grey50", aesthetics = "colour", guide = ggplot2::guide_colourbar()
+#     ) + ggplot2::guides(colour = ggplot2::guide_colourbar(barwidth = 10, barheight = 0.4))
+#   } } else if (!is.null(x$labels$fill)) {
+#     if (x$labels$fill == "fill") {
+#       x[["layers"]][[1]][["aes_params"]][["colour"]] <- unname(sano_colors[["discrete"]][1])
+#       x[["layers"]][[1]][["aes_params"]][["fill"]] <- unname(sano_colors[["discrete"]][2])
+#       x[["layers"]][[1]][["aes_params"]][["alpha"]] <- 0.5
+#     }else if (class(x$data[, as_name(x$mapping$fill)]) %in% c("factor", "character") == T) {
+#       x <- x + ggplot2::scale_fill_manual(values = unname(sano_colors[["discrete"]]))
+#     }else if (class(x$data[, as_name(x$mapping$fill)]) %in% c("numeric", "integer") == T) {
+#       x <- x + ggplot2::scale_fill_gradientn(
+#         colours = unname(sano_colors[["continuous"]]),
+#         space = "Lab", na.value = "grey50", aesthetics = "fill", guide = ggplot2::guide_colourbar()
+#       ) + ggplot2::guides(fill = ggplot2::guide_colourbar(barwidth = 10, barheight = 0.4)) +
+#         ggplot2::scale_fill_gradientn(
+#           colours = sano_colors[["continuous"]],
+#           space = "Lab", na.value = "grey50", aesthetics = "colour", guide = ggplot2::guide_colourbar()
+#         ) + ggplot2::guides(colour = ggplot2::guide_colourbar(barwidth = 10, barheight = 0.4))
+#     }
+#   } else {
+#     x[["layers"]][[1]][["aes_params"]][["colour"]] <- unname(sano_colors[["discrete"]][1])
+#     x[["layers"]][[1]][["aes_params"]][["fill"]] <- unname(sano_colors[["discrete"]][2])
+#     x[["layers"]][[1]][["aes_params"]][["alpha"]] <- 0.5
+#   }
+
+
+return(x)
 }
 
 
