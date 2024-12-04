@@ -15,7 +15,8 @@ Imports:
     ggpubr,
     grid,
     png,
-    ggtext
+    ggtext,
+    flextable
 Depends: 
     R (>= 3.5)
 LazyData: true
