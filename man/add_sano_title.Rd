@@ -4,7 +4,7 @@
 \alias{add_sano_title}
 \title{Add a Styled Title to a ggplot}
 \usage{
-add_sano_title(label, number, subtitle = waiver())
+add_sano_title(label, number, subtitle = ggplot2::waiver())
 }
 \arguments{
 \item{label}{A character vector representing the main title text.}

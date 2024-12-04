@@ -17,7 +17,7 @@
 #'   add_sano_title(label = "Car Weight vs. MPG", number = 1)
 #' print(p)
 #' }
-add_sano_title <- function(label, number, subtitle = waiver()) {
+add_sano_title <- function(label, number, subtitle = ggplot2::waiver()) {
   # Validate that 'label' is a character vector
   if (!is.character(label)) {
     stop("The 'label' must be a character vector.")
@@ -40,5 +40,5 @@ add_sano_title <- function(label, number, subtitle = waiver()) {
   )
 
   # Return the labs() function with the formatted title and subtitle
-  labs(title = label, subtitle = subtitle)
+  ggplot2::labs(title = label, subtitle = subtitle)
 }
