@@ -1,4 +1,4 @@
-## script to udate the package
+## script to update the package
 
 ## load helper packages
 library(devtools) ## develop the package
