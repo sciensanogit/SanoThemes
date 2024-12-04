@@ -15,11 +15,8 @@ Imports:
     grid,
     png,
     ggtext,
-<<<<<<< Updated upstream
-    flextable
-=======
+    flextable,
     extrafont
->>>>>>> Stashed changes
 Depends: 
     R (>= 3.5)
 LazyData: true
