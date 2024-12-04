@@ -4,8 +4,6 @@
 library(devtools) ## develop the package
 library(usethis) ## use for easy pkg-building
 library(pkgdown) ## create a page for the package
-library(gapminder) ## save data locally, so we don't need the gapminder dependency
-library(readr)
 
 ## after each change, do the following:
 ## 1. document the changes
