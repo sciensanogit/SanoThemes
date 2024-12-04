@@ -11,4 +11,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: 
     dplyr,
-    ggplot2
+    ggplot2,
+    ggpubr,
+    grid,
+    png
