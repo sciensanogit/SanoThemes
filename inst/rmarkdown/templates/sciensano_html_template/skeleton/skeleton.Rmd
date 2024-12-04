@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r}
-#library(SanoThemes)
+library(SanoThemes)
 library(dplyr)
 library(flextable)
 library(ggplot2)
@@ -62,9 +62,9 @@ This section provides some example of table and plots that you can make with the
 
 ### Table
 
-```{r table1id, tab.cap="Title of the table"}
-# head(mtcars, 30)%>%
-#   sciensano_table()
+```{r}
+ head(mtcars, 30)%>%
+   style_sano_table()
 ```
 
 ### Figures

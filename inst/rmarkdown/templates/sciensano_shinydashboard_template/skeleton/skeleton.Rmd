@@ -22,7 +22,7 @@ runtime: shiny
 ```{r setup, include=FALSE}
 library(flexdashboard)
 library(ggplot2)
-#library(SciensThemes)
+library(SanoThemes)
 library(dplyr)
 library(reactable)
 library(shinyWidgets)

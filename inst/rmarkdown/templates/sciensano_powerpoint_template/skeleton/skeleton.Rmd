@@ -17,7 +17,7 @@ library(officedown)
 library(ggplot2)
 library(rvg)
 library(dplyr)
-#library(SciensThemes)
+library(SanoThemes)
 ```
 
 # Columns and lists
@@ -57,7 +57,7 @@ library(dplyr)
 ::: columns
 ::: column
 ```{r layout='Two Content', ph=officer::ph_location_left()}
-#head(cars)%>%sciensano_table()
+head(cars)%>%style_sano_table()
 ```
 :::
 
@@ -76,8 +76,8 @@ Note HERE
 # Table
 
 ```{r echo=FALSE}
-# head(iris)%>% 
-#   sciensano_table()
+head(iris)%>%
+  style_sano_table()
 ```
 
 # ggplot in right column
@@ -85,7 +85,7 @@ Note HERE
 ::: columns
 ::: column
 ```{r layout='Two Content', ph=officer::ph_location_left()}
-# head(iris)%>%sciensano_table()
+head(iris)%>%style_sano_table()
 ```
 :::
 

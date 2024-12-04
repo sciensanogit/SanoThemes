@@ -29,7 +29,7 @@ knitr::opts_chunk$set(
 ```{r, include=FALSE}
 library(dplyr)
 library(ggplot2)
-#library(SciensThemes)
+library(SanoThemes)
 ```
 
 # A Sciensano RMarkdown Template
@@ -44,9 +44,11 @@ Here is an overview of what this template can provide.
 #| tab.id: Table_1_id
 #| tab.cap: Name of Table 1
 #| tab.lp: table
-# mtcars%>%
-#   head()%>%
-#   sciensano_table(autofit=T)
+
+mtcars%>%
+  head()%>%
+  style_sano_table(autofit=T)
+
 ```
 
 <br />
@@ -84,9 +86,9 @@ map_plot<-ggplot(sids)+
 #| tab.cap: Name of Table 2
 #| tab.lp: table
 
-# head(mtcars,14)%>%
-#   cbind(head(diamonds,14))%>%
-#   sciensano_table(autofit=T)
+head(mtcars,14)%>%
+  cbind(head(diamonds,14))%>%
+  style_sano_table(autofit=T)
 
 ```
 
