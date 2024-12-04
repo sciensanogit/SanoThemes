@@ -34,15 +34,7 @@ plot <- ggplot2::ggplot(data = mtcars) +
   add_sano_title(label = "A plot with hp and mpg", number = 1)
 
 style_sano_plot(plot)
-#> Warning in style_sano_plot(plot): Please specify an available font
-#> The first available font will be taken:
 #> Using font:
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
-#> family not found in Windows font database
-#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
-#> font family not found in Windows font database
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />

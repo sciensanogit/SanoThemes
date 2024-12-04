@@ -33,7 +33,7 @@ x <- x +
 
       #Text format:
       #Markdown element for plot title
-      plot.title = ggtext::element_markdown(size = 10),
+      plot.title = ggtext::element_markdown(size = 24),
       #This sets the font, size, type and colour of text for the chart's subtitle, as well as setting a margin between the title and the subtitle
       plot.subtitle = ggplot2::element_text(family=font,
                                             size=22,
