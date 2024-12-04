@@ -1,3 +1,8 @@
 ^SanoThemes\.Rproj$
 ^\.Rproj\.user$
+<<<<<<< Updated upstream
 ^LICENSE\.md$
+=======
+
+^data-raw\create-color-schemes\.R
+>>>>>>> Stashed changes
